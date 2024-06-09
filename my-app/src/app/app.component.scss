@@ -1,0 +1,126 @@
+.wrapper {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  width: 60%;
+  font-size: 18px;
+}
+
+.examples-container {
+  margin: 20px 0;
+}
+
+.examples-container button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  margin-top: 20px;
+}
+
+.input-block {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-bottom: 30px;
+
+  input {
+    width: 70%;
+    padding: 5px 20px;
+    background: #eee5e5;
+    border: solid 2px black;
+    border-radius: 50px;
+  }
+}
+
+ul li {
+  list-style: none;
+}
+
+.btn-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+button {
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.find-btn {
+  width: 100%;
+  padding: 5px 20px;
+  font-size: 32px;
+  background: #1c7430;
+  color: white;
+  border: none;
+  border-radius: 30px;
+}
+
+.find-btn:not(:disabled):hover {
+  transform: scale(1.05);
+  background: #eee5e5;
+  color: #1c7430;
+  border: solid 3px #1c7430;
+  border-radius: 30px;
+}
+
+.reset-btn {
+  width: 200px;
+  padding: 5px 20px;
+  font-size: 32px;
+  background: #d3092e;
+  color: white;
+  border: none;
+  border-radius: 30px;
+}
+
+.reset-btn:hover {
+  transform: scale(1.05);
+  background: #eee5e5;
+  color: #d3092e;
+  border: solid 3px #d3092e;
+  border-radius: 30px;
+}
+
+button:disabled {
+  background: #cccccc;
+  color: #666666;
+}
+
+.file-upload {
+  margin: 20px 0;
+}
+
+.file-upload input {
+  margin-top: 10px;
+}
+
+.step-controls {
+  margin: 20px 0;
+}
+
+.step-controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.step-controls button:disabled {
+  background: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
