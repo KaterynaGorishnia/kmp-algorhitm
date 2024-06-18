@@ -1,58 +1,9 @@
-<div class="wrapper lato-regular" style="text-align:center">
-    <h1>Алгоритм Кнута-Морріса-Пратта</h1>
-    <p class="description">
-        Алгоритм Кнута-Морріса-Пратта (КМП) призначений для пошуку підрядка в рядку.
-        Він використовує попередню обробку шаблону для створення масиву LPS (Longest Prefix Suffix),
-        що допомагає уникнути повторного порівняння символів після невідповідності.
-    </p>
-    <div class="examples-container">
-        <h3>Приклади:</h3>
-        <button (click)="loadExample(1)">Приклад 1</button>
-        <button (click)="loadExample(2)">Приклад 2</button>
-        <button (click)="loadExample(3)">Приклад 3</button>
-    </div>
-    <div class="input-container">
-        <div class="input-block">
-            <label for="text">Текст:</label>
-            <input id="text" [(ngModel)]="text" />
-        </div>
-        <div class="input-block">
-            <label for="pattern">Шаблон:</label>
-            <input id="pattern" [(ngModel)]="pattern" />
-        </div>
-    </div>
-    <div class="file-upload">
-        <label for="fileInput">Завантажити файл:</label>
-        <input type="file" id="fileInput" (change)="onFileChange($event)" />
-    </div>
-    <div class="btn-block">
-        <button class="find-btn" (click)="findPattern()" [disabled]="!text || !pattern">Знайти</button>
-        <button class="find-btn" (click)="findPatternDetailed()" [disabled]="!text || !pattern">Детальний пошук</button>
-        <button class="reset-btn" (click)="reset()" [disabled]="!text">Скинути</button>
-    </div>
-    <div *ngIf="isSearchPerformed">
-        <div *ngIf="result.length > 0">
-            <h3>Шаблон знайдено на наступних позиціях:</h3>
-            <ul>
-                <li *ngFor="let pos of result">{{ pos }}</li>
-            </ul>
-            <div appHighlight [text]="text" [pattern]="pattern" [positions]="result"></div>
-        </div>
-        <div *ngIf="result.length === 0">
-            <h3>Шаблон не знайдено</h3>
-        </div>
-        <div class="step-controls" *ngIf="steps.length > 0">
-            <button (click)="previousStep()" [disabled]="currentStepIndex <= 0">Назад</button>
-            <button (click)="nextStep()" [disabled]="currentStepIndex >= steps.length - 1">Вперед</button>
-            <button (click)="startAutoStep()">Старт</button>
-            <button (click)="stopAutoStep()">Пауза</button>
-            <button (click)="increaseSpeed()">Швидше</button>
-            <button (click)="decreaseSpeed()">Повільніше</button>
-        </div>
-        <div *ngIf="currentStep">
-            <h3>Поточний крок:</h3>
-            <p>Дія: {{ currentStep.action }}</p>
-            <div [innerHTML]="currentStep.textState"></div>
-        </div>
-    </div>
-</div>
+<nav>
+  <ul>
+    <li class="lato-bold"><a href="/algorithm">Опис Алгоритму</a></li>
+    <li class="lato-bold"><a href="/home">Головна</a></li>
+    <li class="lato-bold"><a href="/interface">Опис Інтерфейсу</a></li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
+
